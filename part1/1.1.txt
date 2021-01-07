@@ -1,0 +1,5 @@
+iida@Iidas-Air part1 % docker container ls -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS                     PORTS     NAMES
+a9970642262b   nginx     "/docker-entrypoint.…"   3 minutes ago   Exited (0) 9 seconds ago             trusting_lehmann
+90f33bfcec5e   nginx     "/docker-entrypoint.…"   3 minutes ago   Exited (0) 9 seconds ago             vigorous_jennings
+6bb1bcb7b2d8   nginx     "/docker-entrypoint.…"   3 minutes ago   Up 3 minutes               80/tcp    priceless_engelbart

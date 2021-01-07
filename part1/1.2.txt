@@ -1,0 +1,6 @@
+iida@Iidas-Air part1 % docker container ls -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+iida@Iidas-Air part1 % docker image ls
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+iida@Iidas-Air part1 % 
+
