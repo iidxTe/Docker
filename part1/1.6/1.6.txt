@@ -1,0 +1,18 @@
+iida@Iidas-Air 1.6 % docker build -t docker-clock .   
+[+] Building 1.5s (6/6) FINISHED                                                                 
+ => [internal] load build definition from Dockerfile                                        0.0s
+ => => transferring dockerfile: 111B                                                        0.0s
+ => [internal] load .dockerignore                                                           0.0s
+ => => transferring context: 2B                                                             0.0s
+ => [internal] load metadata for docker.io/devopsdockeruh/overwrite_cmd_exercise:latest     1.2s
+ => [1/2] FROM docker.io/devopsdockeruh/overwrite_cmd_exercise@sha256:02e38f4285d5cfaff5ed  0.0s
+ => CACHED [2/2] WORKDIR /1.6                                                               0.0s
+ => exporting to image                                                                      0.1s
+ => => exporting layers                                                                     0.0s
+ => => writing image sha256:dc2aacb55a0fe7253e0a27fad21d4e8debe513bba97ca8f2c6b2e749359b97  0.0s
+ => => naming to docker.io/library/docker-clock                                             0.0s
+iida@Iidas-Air 1.6 % docker container run docker-clock
+1
+2
+3
+
