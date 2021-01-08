@@ -1,0 +1,32 @@
+iida@Iidas-Air part1 % docker image pull devopsdockeruh/exec_bash_exercise
+Using default tag: latest
+latest: Pulling from devopsdockeruh/exec_bash_exercise
+1c6172af85ee: Pull complete 
+b194b0e3c928: Pull complete 
+1f5ec00f35d5: Pull complete 
+93b1353672b6: Pull complete 
+3d7f38db3cca: Pull complete 
+21e102f9fe89: Pull complete 
+d851ffed797c: Pull complete 
+a45031e28c68: Pull complete 
+ca3c1414856f: Pull complete 
+02c74c9936fd: Pull complete 
+ddb55f8ab0a8: Pull complete 
+Digest: sha256:d38b6f6b0eed2880e25c9eb7f83f1cd016ffe3a56c9a3fec6e7bee480bf1ed0f
+Status: Downloaded newer image for devopsdockeruh/exec_bash_exercise:latest
+docker.io/devopsdockeruh/exec_bash_exercise:latest
+iida@Iidas-Air part1 % docker image ls
+REPOSITORY                          TAG       IMAGE ID       CREATED        SIZE
+devopsdockeruh/exec_bash_exercise   latest    c52ece77379e   7 months ago   942MB
+iida@Iidas-Air part1 % docker container run -d -it --name looper c5
+5ab0d8b1f2ca3dde61952618970d546e0c85e00f8ccac6d00697f290e06abe1b
+iida@Iidas-Air part1 % docker container ls                         
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES
+5ab0d8b1f2ca   c5        "docker-entrypoint.s…"   24 seconds ago   Up 23 seconds             looper
+iida@Iidas-Air part1 % docker container exec -it looper bash 
+root@5ab0d8b1f2ca:/usr/app# tail -f ./logs.txt
+Fri, 08 Jan 2021 11:22:24 GMT
+Fri, 08 Jan 2021 11:22:27 GMT
+Secret message is:
+"Docker is easy"
+
