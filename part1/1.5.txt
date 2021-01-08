@@ -1,0 +1,18 @@
+iida@Iidas-Air part1 % docker container run -d -it --name looper2 ubuntu sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+a7cba70c7906a3f46ae93ed18c407bdc3f5f9c9f64087058e0d5ea45097446d9
+iida@Iidas-Air part1 % docker container start looper2
+looper2
+iida@Iidas-Air part1 % docker container exec -it looper2 bash
+root@a7cba70c7906:/# apt-get update; apt-get install curl
+...
+...
+...
+root@a7cba70c7906:/# curl helsinki.fi
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+
