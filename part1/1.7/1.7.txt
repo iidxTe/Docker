@@ -1,0 +1,30 @@
+iida@Iidas-Air 1.7 % chmod +x script.sh 
+iida@Iidas-Air 1.7 % docker build -t curler .                               
+[+] Building 0.3s (9/9) FINISHED                                                                 
+ => [internal] load build definition from Dockerfile                                        0.0s
+ => => transferring dockerfile: 36B                                                         0.0s
+ => [internal] load .dockerignore                                                           0.0s
+ => => transferring context: 2B                                                             0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:16.04                             0.0s
+ => [internal] load build context                                                           0.0s
+ => => transferring context: 136B                                                           0.0s
+ => [1/4] FROM docker.io/library/ubuntu:16.04                                               0.0s
+ => CACHED [2/4] WORKDIR /1.7                                                               0.0s
+ => CACHED [3/4] RUN apt-get update && apt-get install -y curl                              0.0s
+ => [4/4] COPY script.sh .                                                                  0.1s
+ => exporting to image                                                                      0.1s
+ => => exporting layers                                                                     0.1s
+ => => writing image sha256:bcae41a4d304052a4d63751612faf74ae388953fc91188788097f5a0d37f7b  0.0s
+ => => naming to docker.io/library/curler                                                   0.0s
+iida@Iidas-Air 1.7 % docker container run -it curler
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+
